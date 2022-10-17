@@ -1,5 +1,5 @@
-# Torchvision test - loading a CIFAR10 dataset.
-# =============================================
+# Torchvision test - loading and classifying a CIFAR10 dataset.
+# =============================================================
 # CSDS 438, Group 10
 # Josh, Theo, Max, Priyan, David, Kane
 
