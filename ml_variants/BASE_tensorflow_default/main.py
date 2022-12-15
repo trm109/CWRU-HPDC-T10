@@ -58,7 +58,7 @@ model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy',ji
 
 
 #Actually start the training.
-model.fit(x_train, y_train, epochs=200, batch_size=32)
+history = model.fit(x_train, y_train, epochs=200, batch_size=32)
 
 #Test it!
 #Create a new predication
@@ -71,5 +71,14 @@ accuracy = accuracy_score(y_test, y_hat) #Prints the accuracy of the model, give
 print("Accuracy: " + str(accuracy))
 #Save the model.
 model.save('tfmodel')
+print(history.history.keys())
+import matplotlib.pyplot as plt
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['loss'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['accuracy', 'loss'])#, loc='upper left')
+plt.savefig('results.png')
 
 print(f"Completed running!")
