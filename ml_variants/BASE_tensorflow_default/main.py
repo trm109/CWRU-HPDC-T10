@@ -54,7 +54,7 @@ model.add(Dense(units=1, activation='sigmoid'))
 #loss function of Binary Cross entropy
 #Optimizer function of sgd
 #Metrics of 'accuracy' (what gets evaluated by the model.)
-model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy',jit_compile=True)
+model.compile(loss='binary_crossentropy', optimizer='sgd', metrics='accuracy',jit_compile=False)
 
 
 #Actually start the training.
